@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted } from 'vue';
 import { useUsbStore } from '../stores/usb';
-import Product from '../components/product.vue'
+import Product from '../components/Product.vue'
 
 const usb = useUsbStore()
 

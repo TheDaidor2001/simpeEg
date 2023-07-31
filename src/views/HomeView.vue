@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted } from 'vue';
 import { useUsbStore } from '../stores/usb';
-import Product  from '../components/product.vue'
+import vProduct from '../components/v-product.vue';
 
 
 const usb = useUsbStore()
@@ -36,7 +36,7 @@ onMounted(async () => {
 
     <div>
       <div class="mt-14 grid grid-cols-1 md:grid-cols-2 3xl:grid-cols-4 gap-10 w-2/3 mx-auto">
-       <Product 
+       <vProduct 
         v-for="producto in usb.productos"
         :producto="producto"
        />

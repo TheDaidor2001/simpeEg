@@ -1,11 +1,10 @@
 import { defineStore } from "pinia";
-import {ref} from 'vue'
+import {ref, inject} from 'vue'
 import UsbApi from "../api/UsbApi";
 
 
-
-
 export const useUsbStore = defineStore("usb", () => {
+  const toast = inject('toast')
 
   const productos = ref([])
   const loading = ref(false)
@@ -39,7 +38,12 @@ export const useUsbStore = defineStore("usb", () => {
     if(confirmation) {
       try {
         await UsbApi.delete(id)
+        toast.open({
+          message: 'Producto eliminado con éxito',
+          type: 'success'
+      })
         getAllData()
+        
       } catch (error) {
         console.log(error);
       }

@@ -18,10 +18,6 @@ const toast = inject('toast')
 function deleteProduct(id) {
     try {
         usbStore.deleteProduct(id)
-        toast.open({
-            message: 'Producto eliminado con éxito',
-            type: 'success'
-        })
     } catch (error) {
         console.log(error);
     }
@@ -31,8 +27,8 @@ function deleteProduct(id) {
 
 <template>
     <div class="bg-white p-10">
-        <img class="w-60 h-auto mx-auto" :src="producto.imagen" :alt="`imagen del producto ${producto.name}`">
-        <h3 class="font-medium text-2xl mt-2 text-gray-700">{{ producto.name }}</h3>
+        <img class="drop-shadow-md w-60 h-auto mx-auto" :src="producto.imagen" :alt="`imagen del producto ${producto.name}`">
+        <h3 class="font-medium text-2xl mt-2 text-gray-700 ">{{ producto.name }}</h3>
         <p>{{ producto.detalle }}</p>
         <p class="font-bold text-2xl mb-3">XAF {{ producto.precio }}</p>
         <a href="" v-if="show">

@@ -6,7 +6,11 @@ module.exports = {
     "./formkit.config.js"
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'inter': ['Inter', 'sans-serif']
+      }
+    },
   },
   plugins: [],
 }

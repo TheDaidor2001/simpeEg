@@ -29,18 +29,20 @@ onMounted(async () => {
           <path stroke-linecap="round" stroke-linejoin="round"
             d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
           </svg>  
-          <RouterLink class="bg-black px-2 py-1 rounded text-white hover:bg-gray-800 transition-colors" :to="{name: 'crear-producto'}">Crear Producto</RouterLink>
         </div>
       </div>
-
     </nav>
 
     <div>
+     <div class="flex flex-col md:flex-row px-10 md:px-0 gap-5 justify-between max-w-5xl mx-auto mt-10">
+        <RouterLink class="bg-black px-2 py-1 rounded text-white hover:bg-gray-800 transition-colors" :to="{name: 'crear-producto'}">Crear Producto</RouterLink>
+        <RouterLink class="bg-black px-2 py-1 rounded text-white hover:bg-gray-800 transition-colors" :to="{name: 'admin'}">Administrar Productos</RouterLink>
+      </div>
       <div v-if="usb.loading" class="flex justify-center items-center h-screen">
           <vLoading 
           />
       </div>
-      <div class="mt-14 grid grid-cols-1 md:grid-cols-2 3xl:grid-cols-4 gap-10 w-2/3 mx-auto">
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-2 3xl:grid-cols-4 gap-10 w-2/3 mx-auto">
        <vProduct 
         v-for="producto in usb.productos"
         :producto="producto"

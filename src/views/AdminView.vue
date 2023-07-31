@@ -29,7 +29,7 @@ onMounted(() => {
           <VLoading 
           />
       </div>
-    <div class=" container mx-auto grid grid-cols-1 gap-5 md:grid-cols-2 mt-10 mx-w-5xl px-10 w-full  lg:w-2/3 " v-else>
+    <div class=" container mx-auto grid grid-cols-1 gap-5 md:grid-cols-2 mt-10 mx-w-5xl px-5 lg:px-0 w-full  lg:w-2/3 " v-else>
         <vProduct 
             v-for="producto in usbStore.productos"
             :producto="producto"

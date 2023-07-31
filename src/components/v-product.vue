@@ -27,7 +27,9 @@ function deleteProduct(id) {
 
 <template>
     <div class="bg-white p-10">
-        <img class="drop-shadow-md w-60 h-auto mx-auto" :src="producto.imagen" :alt="`imagen del producto ${producto.name}`">
+        <div class="p-5 shadow-lg mb-10">
+            <img class="w-60 h-auto mx-auto" :src="producto.imagen" :alt="`imagen del producto ${producto.name}`">
+        </div>
         <h3 class="font-medium text-2xl mt-2 text-gray-700 ">{{ producto.name }}</h3>
         <p>{{ producto.detalle }}</p>
         <p class="font-bold text-2xl mb-3">XAF {{ producto.precio }}</p>

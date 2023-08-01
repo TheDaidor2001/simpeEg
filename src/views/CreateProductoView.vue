@@ -22,13 +22,18 @@ async function handleSubmit(data) {
 
 </script>
 <template>
-    <h1 class="text-center text-4xl font-bold mt-10">Añade <span class="text-blue-500 underline font-black">nuevos
-            productos</span></h1>
+    <h1 class="text-center text-4xl font-bold my-10">Añade <span class="text-blue-500 underline font-black">nuevos
+            productos</span>
+    </h1>
+
+    <RouterLink class="ml-10 bg-blue-500 hover:bg-blue-600 transition-colors px-3 py-2 text-white rounded-lg" :to="{name: 'home'}">
+        Volver
+    </RouterLink>
 
     <div class="max-w-3xl mx-auto w-full mt-10 px-10 lg:px-0">
         <FormKit 
             type="form" 
-            :actions="false"
+            submit-label="Crear Producto" 
             @submit="handleSubmit"
         >
             <FormKit 
@@ -71,9 +76,6 @@ async function handleSubmit(data) {
                     required: 'El precio es obligatorio',
                     number: 'Deben ser numeros'
                 }"  
-            />
-            <FormKit
-                type="submit"
             />
         </FormKit>
     </div>

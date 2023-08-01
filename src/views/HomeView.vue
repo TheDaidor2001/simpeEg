@@ -22,8 +22,8 @@ onMounted(async () => {
         class="w-6 h-6 lg:w-10 lg:h-10">
         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
       </svg>
-      <h1 class="text-xl lg:text-3xl text-center">Simple<span
-          class="font-bold ml-1 border-b-2 border-black pb-1">eg</span></h1>
+      <RouterLink :to="{name: 'home'}" class="text-xl lg:text-3xl text-center">Simple<span
+          class="font-bold ml-1 border-b-2 border-black pb-1">eg</span></RouterLink>
       <div class="flex gap-5 items-center">
         <vDropDown />
       </div>

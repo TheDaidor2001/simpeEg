@@ -35,7 +35,7 @@ function deleteProduct(id) {
         <h3 class="font-medium text-lg text-gray-700 ">{{ producto.name }}</h3>
         <p class="text-md mb-5">{{ producto.detalle }}</p>
         <p class="font-bold text-xl mb-10">XAF {{ producto.precio }}</p>
-        <a class="block text-center bg-black hover:bg-gray-900 transition-colors text-white px-5 py-3 rounded-md" href="" v-if="show">
+        <a class="block text-center bg-black hover:bg-gray-900 transition-colors text-white px-5 py-3 rounded-md" href="https://api.whatsapp.com/send/?phone=240222705408" v-if="show">
             Comprar
         </a>
         <div v-else class="flex justify-between mt-5">

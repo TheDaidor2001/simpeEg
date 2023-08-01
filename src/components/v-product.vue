@@ -36,7 +36,8 @@ function deleteProduct(id) {
         <p class="text-md mb-5">{{ producto.detalle }}</p>
         <p class="font-bold text-xl mb-10">XAF {{ producto.precio }}</p>
         <a class="block text-center bg-green-500 hover:bg-green-600 transition-colors text-white px-5 py-3 rounded-md"
-            href="https://api.whatsapp.com/send/?phone=240222705408" v-if="show">
+            href="https://api.whatsapp.com/send/?phone=240222705408"
+            target="_blank" v-if="show">
             <span class="text-lg flex items-center justify-center gap-5">
                 Comprar
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-whatsapp"

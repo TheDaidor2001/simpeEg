@@ -10,6 +10,7 @@
   "dependencies": {
     "@formkit/themes": "^0.17.5",
     "@formkit/vue": "^0.17.5",
+    "@headlessui/vue": "^1.7.15",
     "axios": "^1.4.0",
     "pinia": "^2.1.4",
     "vue": "^3.3.4",

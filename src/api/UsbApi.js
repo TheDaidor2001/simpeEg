@@ -10,5 +10,11 @@ export default {
     },
     delete(id) {
         return api.delete(`/delete/${id}`)
+    },
+    getOne(id) {
+        return api.get(`/getOne/${id}`)
+    },
+    update(id, product) {
+        return api.patch (`/update/${id}`, product)
     }
 }

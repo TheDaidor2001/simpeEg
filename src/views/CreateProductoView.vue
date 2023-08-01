@@ -63,7 +63,7 @@ async function handleSubmit(data) {
             />
             <FormKit 
                 type="text" 
-                label="Imagen del producto" 
+                label="Precio del producto" 
                 name="precio" 
                 placeholder="Ej: 20000"
                 validation="required|number" 

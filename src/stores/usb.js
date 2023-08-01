@@ -7,6 +7,7 @@ export const useUsbStore = defineStore("usb", () => {
   const toast = inject('toast')
 
   const productos = ref([])
+  const producto = ref({})
   const loading = ref(false)
 
 
@@ -51,11 +52,26 @@ export const useUsbStore = defineStore("usb", () => {
     
   }
 
+  async function updateProduct(id, producto) {
+    try {
+      await UsbApi.update(id, producto)
+      toast.open({
+        message: 'Producto actualizado con éxito',
+        type: 'success'
+      })
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  
+
   return {
     productos,
+    producto,
     loading,
     getAllData,
     createProduct,
-    deleteProduct
+    deleteProduct,
+    updateProduct,
   };
 });

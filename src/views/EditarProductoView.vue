@@ -32,7 +32,6 @@ async function handleSumbit(data) {
     router.push({name: 'admin'})
 }
 
-
 </script>
 
 <template>

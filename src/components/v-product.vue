@@ -36,7 +36,7 @@ function deleteProduct(id) {
         <p class="text-md mb-5">{{ producto.detalle }}</p>
         <p class="font-bold text-xl mb-10">XAF {{ producto.precio }}</p>
         <a class="block text-center bg-green-500 hover:bg-green-600 transition-colors text-white px-5 py-3 rounded-md"
-            href="bit.ly/3KnAhyu"
+            href="https://bit.ly/3KnAhyu"
             target="_blank" v-if="show">
             <span class="text-lg flex items-center justify-center gap-5">
                 Comprar

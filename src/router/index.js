@@ -1,5 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import NotFound from "../views/NotFound.vue";
+
+
 
 const router = createRouter({
   history: createWebHistory(),
@@ -23,6 +26,10 @@ const router = createRouter({
       path: "/editar-producto/:id",
       name: "editar-producto",
       component: () => import("../views/EditarProductoView.vue"),
+    },
+    {
+      path: "/:notFound",
+      component: NotFound,
     },
   ],
 });

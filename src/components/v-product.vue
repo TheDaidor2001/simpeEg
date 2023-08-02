@@ -47,7 +47,7 @@ function deleteProduct(id) {
         <p class="text-md mb-5">{{ producto.detalle }}</p>
         <p class="font-bold text-xl mb-10">XAF {{ producto.precio }}</p>
         <a class="block text-center bg-green-500 hover:bg-green-600 transition-colors text-white px-5 py-3 rounded-md"
-            @click="sendMessage('240222705408', `hola, me gustaria comprar este producto que viene en la web ${producto.detalle}`)"
+            @click="sendMessage('240222705408', `hola, me gustaria comprar este producto que viene en la web ${producto.detalle}: https://simpe-eg.vercel.app`)"
             :href="urlFinished"
             v-if="show">
             <span class="text-lg flex items-center justify-center gap-5">

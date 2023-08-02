@@ -1,7 +1,8 @@
 <script setup>
-import { inject } from 'vue'
+import { inject, computed, watchEffect } from 'vue'
 import { useRouter } from 'vue-router';
 import { useUsbStore } from '../stores/usb';
+import  useWhatsapp  from '../composables/useWhatsapp'
 defineProps({
     producto: {
         type: Object
@@ -12,9 +13,19 @@ defineProps({
 })
 
 
+
 const usbStore = useUsbStore()
 const toast = inject('toast')
 const router = useRouter()
+const {sendMessage, urlFinished} = useWhatsapp()
+
+watchEffect((urlFinished) => {
+    redirect()
+})
+
+function redirect() {
+    router.push(urlFinished)
+}
 
 
 function deleteProduct(id) {
@@ -36,8 +47,9 @@ function deleteProduct(id) {
         <p class="text-md mb-5">{{ producto.detalle }}</p>
         <p class="font-bold text-xl mb-10">XAF {{ producto.precio }}</p>
         <a class="block text-center bg-green-500 hover:bg-green-600 transition-colors text-white px-5 py-3 rounded-md"
-            href="https://bit.ly/3KnAhyu"
-            target="_blank" v-if="show">
+            @click="sendMessage('240222705408', `hola, me gustaria comprar este producto que viene en la web ${producto.detalle}`)"
+            :href="urlFinished"
+            v-if="show">
             <span class="text-lg flex items-center justify-center gap-5">
                 Comprar
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-whatsapp"

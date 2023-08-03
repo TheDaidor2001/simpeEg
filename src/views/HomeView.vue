@@ -24,9 +24,9 @@ onMounted(async () => {
       </svg>
       <RouterLink :to="{name: 'home'}" class="text-xl lg:text-3xl text-center">Simple<span
           class="font-bold ml-1 border-b-2 border-black pb-1">eg</span></RouterLink>
-      <div class="flex gap-5 items-center">
+      <!-- <div class="flex gap-5 items-center">
         <vDropDown />
-      </div>
+      </div> -->
     </div>
   </nav>
 

@@ -13,7 +13,6 @@ export default function useWhatsapp() {
         const url = `${baseUrl.value}phone=${phone}&text=${updatedText}`
     
         urlFinished.value = url
-        console.log(urlFinished.value);
     }
 
     return {

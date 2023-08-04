@@ -27,6 +27,7 @@ onMounted(async () => {
       <!-- <div class="flex gap-5 items-center">
         <vDropDown />
       </div> -->
+      <RouterLink class="bg-black text-white px-2 py-1 rounded-lg hover:bg-gray-900 transition-colors" :to="{name: 'login'}">Iniciar Sesión</RouterLink>
     </div>
   </nav>
 

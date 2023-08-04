@@ -28,6 +28,16 @@ const router = createRouter({
       component: () => import("../views/EditarProductoView.vue"),
     },
     {
+      path: "/registro",
+      name: "registro",
+      component: () => import("../views/RegisterView.vue"),
+    },
+    {
+      path: "/login",
+      name: "login",
+      component: () => import("../views/LoginView.vue"),
+    },
+    {
       path: "/:notFound",
       component: NotFound,
     },

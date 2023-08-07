@@ -4,6 +4,7 @@ import { useUsbStore } from '../stores/usb';
 import vProduct from '../components/v-product.vue'
 import vLoading from '../components/v-loading.vue'
 import vDropDown from '../components/v-dropDown.vue';
+import vLogin from '../components/v-login.vue';
 
 
 const usb = useUsbStore()
@@ -27,7 +28,7 @@ onMounted(async () => {
       <!-- <div class="flex gap-5 items-center">
         <vDropDown />
       </div> -->
-      <RouterLink class="bg-black text-white px-2 py-1 rounded-lg hover:bg-gray-900 transition-colors" :to="{name: 'login'}">Iniciar Sesión</RouterLink>
+      <vLogin />
     </div>
   </nav>
 

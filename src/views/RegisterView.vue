@@ -52,5 +52,8 @@ function handleSubmit({ password_confirm, ...formData }) {
                 />
                 
         </FormKit>
+
+        <p class=" text-gray-700">¿Ya tienes una cuenta?</p>
+        <RouterLink class="text-center mx-auto text-blue-500" :to="{name: 'login'}">Iniciar Sesión</RouterLink>
     </div>
 </template>

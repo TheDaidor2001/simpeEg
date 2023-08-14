@@ -42,8 +42,6 @@ const userStore = useUserStore()
                     }"  
                 />
         </FormKit>
-        <p class=" text-gray-700">¿Aún no tienes cuenta?</p>
-        <RouterLink class="text-center mx-auto text-blue-500" :to="{name: 'registro'}">Crear una cuenta</RouterLink>
     </div>
 </template>
 

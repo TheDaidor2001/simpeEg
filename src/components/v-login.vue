@@ -34,16 +34,6 @@ const router = useRouter()
                     </button>
                     </MenuItem>
                 </div>
-                <div class="px-1 py-1">
-                    <MenuItem v-slot="{ active }">
-                    <button :class="[
-                        active ? 'bg-black text-white' : 'text-gray-900',
-                        'group flex w-full gap-3 items-center rounded-md px-2 py-2 text-sm',
-                    ]" @click="router.push({ name: 'registro' })">
-                        Crear Cuenta
-                    </button>
-                    </MenuItem>
-                </div>
             </MenuItems>
         </transition>
     </Menu>
